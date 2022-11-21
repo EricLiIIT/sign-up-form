@@ -1,0 +1,256 @@
+:root {
+  /* --accent-color: #31601bb1; */
+  --accent-color: #474973;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Edu QLD Beginner", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+div.content {
+  display: flex;
+}
+
+div.left div.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: auto;
+  width: 100%;
+  background-color: #6c6c6c47;
+}
+
+div.modal img {
+  margin-right: 20px;
+  height: 80px;
+  width: 80px;
+}
+
+div.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--accent-color);
+}
+
+div.form-input-row {
+  display: flex;
+  flex-direction: column;
+}
+
+div.hook {
+  padding-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+div.hook p {
+  margin-bottom: 20px;
+}
+
+div.form-container {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+div.end {
+  display: flex;
+  flex-direction: column;
+}
+
+div.end * {
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+div.end a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+div.end a:link {
+  color: black;
+  text-decoration: none;
+}
+
+div.row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+input {
+  outline: none;
+  border: solid 2px #bbbbbb;
+  border-radius: 5px;
+  padding: 5px;
+  width: 300px;
+}
+
+input:focus {
+  border: solid 2px #262626;
+  box-shadow: 2px 2px grey;
+  transition: 0.8s;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 40px 10px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--accent-color);
+  background-color: #e4e4e4;
+  border: none;
+  border: solid 2px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: solid 2px #262626;
+  box-shadow: 2px 2px grey;
+  transition: 0.8s;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 400px) {
+  * {
+    color: white;
+  }
+
+  div.left div.modal {
+    background-image: url(./images/food.jpg);
+    background-position: center;
+    background-size: 100vw;
+    height: 25vh;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+  }
+
+  div.content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form div.row {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  div.right {
+    text-align: center;
+    width: 100vw;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  div.form-container {
+    padding-bottom: 20px;
+  }
+}
+
+/* table styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  * {
+    color: white;
+  }
+
+  div.left div.modal {
+    background-color: none;
+    background-image: url(./images/food.jpg);
+    background-position: center;
+    background-size: 100vw;
+    height: 25vh;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+  }
+
+  div.content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form div.row {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  div.right {
+    text-align: center;
+    width: 100%;
+  }
+
+  div.right > * {
+    padding-left: 10px;
+    height: 100%;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  div.form-container {
+    padding-bottom: 20px;
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 961px) {
+  div.left {
+    background-image: url(./images/food.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 33.3vw;
+    height: 100vh;
+    font-weight: bold;
+    display: flex;
+  }
+
+  div.modal {
+    font-size: 60px;
+    padding: 0px 15px 0px 15px;
+  }
+
+  div.row {
+    display: flex;
+    justify-content: start;
+  }
+
+  div.form-input-row:nth-child(2) {
+    margin-left: 50px;
+  }
+  div.right {
+    height: 100vh;
+    padding-left: 40px;
+  }
+}
